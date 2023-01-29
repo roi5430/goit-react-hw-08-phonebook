@@ -1,0 +1,44 @@
+.phonebook {
+  width: 300px;
+  margin: 20px 0;
+}
+.phonebook__form {
+  border: 1.5px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.phonebook__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.phonebook__input {
+  width: 150px;
+  padding: 7px;
+  margin-top: 5px;
+  height: 20px;
+  background-color: rgba(219, 219, 219, 0.428);
+  border: 1px solid rgb(124, 121, 121);
+  border-radius: 20px;
+}
+
+.phonebook__input:focus,
+.phonebook__input:hover {
+  box-shadow: 2px 2px 2px rgb(114, 166, 250);
+}
+
+.phonebook__btn {
+  width: 100px;
+  padding: 5px;
+  background-color: rgba(219, 219, 219, 0.428);
+  border: 1px solid rgb(124, 121, 121);
+  border-radius: 20px;
+}
+
+.phonebook__btn:hover,
+.phonebook__btn:focus {
+  background-color: rgba(78, 129, 213, 0.505);
+}

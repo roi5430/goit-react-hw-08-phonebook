@@ -1,0 +1,29 @@
+.contacts {
+  width: 300px;
+}
+
+.contacts__list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.item__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-weight: 500;
+  background-color: rgba(219, 219, 219, 0.428);
+  border: 1px solid rgb(124, 121, 121);
+  border-radius: 20px;
+}
+.contacts__btn {
+  background-color: rgba(219, 219, 219, 0.428);
+  border: 1px solid rgb(124, 121, 121);
+  border-radius: 20px;
+}
+.contacts__btn:hover,
+.contacts__btn:focus {
+  background-color: rgba(78, 129, 213, 0.505);
+}

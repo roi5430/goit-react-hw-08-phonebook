@@ -1,0 +1,25 @@
+.filter__label {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.filter__text {
+  margin-bottom: 10px;
+}
+
+.filter__input {
+  width: 150px;
+  padding: 7px;
+  margin-top: 5px;
+  height: 20px;
+  background-color: rgba(219, 219, 219, 0.428);
+  border: 1px solid rgb(124, 121, 121);
+  border-radius: 20px;
+}
+
+.filter__input:focus,
+.filter__input:hover {
+  box-shadow: 2px 2px 2px rgb(114, 166, 250);
+}
