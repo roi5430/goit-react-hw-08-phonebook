@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import * as yup from 'yup';
 import { register } from 'redux/auth/operations';
-import css from './RegisterForm.module.css';
+import css from '../RegisterForm/RegisterForm.module.css';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -35,24 +35,26 @@ export const RegisterForm = () => {
       >
         <label className={css.label}>
           Username
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" className={css.input} />
         </label>
         <label className={css.label}>
           Email
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" className={css.input} />
         </label>
         <label className={css.label}>
           Password
           <input
+            className={css.input}
             id="pass"
             type="password"
             name="password"
             placeholder="more then 6 symbols"
           />
         </label>
-        <button type="submit">Register</button>
+        <button className={css.btn} type="submit">
+          Register
+        </button>
       </form>
-      {error && <p>Something whent wrong, please try again</p>}
     </>
   );
 };

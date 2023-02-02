@@ -1,3 +1,18 @@
+const styles = {
+  container: {
+    minHeight: 'calc(100vh - 50px)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontWeight: 500,
+    fontSize: 40,
+    textAlign: 'center',
+    color: '#2a363bd4',
+  },
+};
+
 export default function Home() {
   return (
     <div style={styles.container}>
