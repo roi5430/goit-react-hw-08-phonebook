@@ -6,7 +6,7 @@ import { addContacts } from '../../redux/operations';
 
 export const PhonebookForm = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const contactsSelector = useSelector(state => state.contacts.items);
   const dispatch = useDispatch();
@@ -17,14 +17,14 @@ export const PhonebookForm = () => {
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
     if (!checkName) {
-      const currentContact = { id: nanoid(), phone, name };
+      const currentContact = { id: nanoid(), number, name };
       dispatch(addContacts(currentContact));
     } else {
       window.alert(`${name} is already in contacts`);
     }
 
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   return (
@@ -53,8 +53,8 @@ export const PhonebookForm = () => {
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
-            value={phone}
-            onChange={e => setPhone(e.target.value)}
+            value={number}
+            onChange={e => setNumber(e.target.value)}
           />
         </label>
         <button className={css.phonebook__btn} type="submit">

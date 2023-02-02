@@ -17,11 +17,11 @@ export const NameContactsList = () => {
       <ul className={css.contacts__list}>
         {visibleContacts.length > 0
           ? visibleContacts.map(item => {
-              const { id, name, phone } = item;
+              const { id, name, number } = item;
               return (
                 <li key={id}>
                   <div className={css.item__content}>
-                    {name}: {phone}
+                    {name}: {number}
                     <button
                       className={css.contacts__btn}
                       type="button"

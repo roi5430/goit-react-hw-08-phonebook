@@ -3,11 +3,9 @@ import contactsSlice from './contactsSlice';
 
 import filtersSlice from './filtersSlice';
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     contacts: contactsSlice,
     filter: filtersSlice,
   },
 });
-
-export { store };
