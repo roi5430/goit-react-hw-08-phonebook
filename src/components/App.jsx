@@ -4,6 +4,7 @@ import { Filter } from './Filter/Filter';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
+import { AppBar } from './AppBar/AppBar';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ export const App = () => {
 
   return (
     <section>
+      <AppBar />
       <h1>Phonebook</h1>
       <PhonebookForm />
       <h2>Contacts</h2>

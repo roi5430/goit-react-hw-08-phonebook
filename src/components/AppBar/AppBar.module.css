@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(
+    50deg,
+    rgba(153, 153, 154, 1) 0%,
+    rgba(181, 181, 184, 1) 5%,
+    rgba(173, 173, 196, 0.772) 35%,
+    rgba(157, 219, 232, 0.1) 65%,
+    rgba(166, 220, 231, 0.13) 90%
+  );
+}
