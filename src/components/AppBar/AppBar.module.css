@@ -1,7 +1,6 @@
 .header {
   display: flex;
   align-items: center;
-  width: 100vw;
   padding: 30px;
   justify-content: space-between;
   background: linear-gradient(
