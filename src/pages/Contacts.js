@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
+import { Helmet } from 'react-helmet';
 import { NameContactsList } from '../components/NameContactsList/NameContactsList';
 import { PhonebookForm } from 'components/PhonebookForm/PhonebookForm';
 import { Filter } from '../components/Filter/Filter';
@@ -25,6 +25,9 @@ export default function Contacts() {
 
   return (
     <section>
+      <Helmet>
+        <title>Your contacts</title>
+      </Helmet>
       <h2 style={styles.title}>Phonebook</h2>
       <PhonebookForm />
       <h2 style={styles.title}>Contacts</h2>

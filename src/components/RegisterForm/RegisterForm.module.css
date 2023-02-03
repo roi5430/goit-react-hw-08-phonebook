@@ -3,7 +3,6 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
 }
 .input {
   width: 250px;

@@ -1,14 +1,16 @@
-import { useDispatch } from 'react-redux';
-// import * as yup from 'yup';
+import { useDispatch, useSelector } from 'react-redux';
+import toast from 'react-hot-toast';
 import { register } from 'redux/auth/operations';
 import css from '../RegisterForm/RegisterForm.module.css';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const error = useSelector(state => state.auth.error);
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
+
     dispatch(
       register({
         name: form.elements.name.value,
@@ -16,23 +18,13 @@ export const RegisterForm = () => {
         password: form.elements.password.value,
       })
     );
+    toast.success('You are successfully regestrired');
     form.reset();
   };
 
-  // const schema = yup.object().shape({
-  //   name: yup.string().required(),
-  //   email: yup.string().email().required(),
-  //   password: yup.string().min(6).required(),
-  // });
-
   return (
     <>
-      <form
-        className={css.form}
-        onSubmit={handleSubmit}
-        // validationSchema={schema}
-        autoComplete="off"
-      >
+      <form className={css.form} onSubmit={handleSubmit}>
         <label className={css.label}>
           Username
           <input
@@ -47,13 +39,19 @@ export const RegisterForm = () => {
         </label>
         <label className={css.label}>
           Email
-          <input type="email" name="email" id="email" className={css.input} />
+          <input
+            type="text"
+            name="email"
+            className={css.input}
+            message="Please enter valid email"
+            required
+          />
         </label>
         <label className={css.label}>
           Password
           <input
             className={css.input}
-            id="pass"
+            minLength="7"
             type="password"
             name="password"
             placeholder="more then 7 symbols"
@@ -63,6 +61,7 @@ export const RegisterForm = () => {
           Register
         </button>
       </form>
+      {error && toast.error(' Something whent wrong, please try again')}
     </>
   );
 };
