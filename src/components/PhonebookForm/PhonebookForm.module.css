@@ -36,6 +36,7 @@
   background-color: rgba(219, 219, 219, 0.428);
   border: 1px solid rgb(124, 121, 121);
   border-radius: 20px;
+  color: #2a363bd4;
 }
 
 .phonebook__btn:hover,

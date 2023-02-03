@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #2a363bd4;
 }
 
 code {
@@ -30,4 +31,9 @@ h2 {
 
 section {
   padding: 20px;
+}
+
+a:focus,
+a:hover {
+  box-shadow: 0 4px 2px -2px rgba(114, 166, 250, 0.537);
 }

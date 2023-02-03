@@ -1,9 +1,24 @@
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .username {
   font-weight: 700;
+  color: rgb(42 54 59 / 83%);
+}
+
+.btn {
+  color: rgb(42 54 59 / 83%);
+  font-weight: 700;
+  width: 100px;
+  padding: 5px;
+  background-color: transparent;
+  border: 2px solid rgb(124, 121, 121);
+  border-radius: 20px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: rgba(78, 129, 213, 0.505);
 }

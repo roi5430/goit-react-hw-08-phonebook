@@ -1,6 +1,7 @@
 .link {
   display: inline-block;
   text-decoration: none;
+  margin-right: 20px;
   font-weight: 700;
   color: #2a363bd4;
 }
